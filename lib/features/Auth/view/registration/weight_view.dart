@@ -77,20 +77,21 @@ class WeightView extends StatelessWidget {
                   builder: (context, state) {
                     return MyButton(
                       onPressed: () {
-                        if (state is SelectWeight) {
-                          final weight = state.selectWeight;
-                          context.read<RegistrationCubit>().saveWeight(weight);
-                          GoRouter.of(context).push('/heightview');
-                        } else {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Center(
-                                child: Text('Please select your weight!'),
-                              ),
-                              backgroundColor: Colors.redAccent,
-                            ),
-                          );
-                        }
+                        // if (state is SelectWeight) {
+                        //   final weight = state.selectWeight;
+                        //   context.read<RegistrationCubit>().saveWeight(weight);
+
+                        // } else {
+                        //   ScaffoldMessenger.of(context).showSnackBar(
+                        //     SnackBar(
+                        //       content: Center(
+                        //         child: Text('Please select your weight!'),
+                        //       ),
+                        //       backgroundColor: Colors.redAccent,
+                        //     ),
+                        //   );
+                        // }
+                        GoRouter.of(context).push('/heightview');
                       },
                       text: "Next",
                       buttonColor: appColors.onPrimary,

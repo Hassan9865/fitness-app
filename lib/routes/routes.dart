@@ -45,6 +45,8 @@ final GoRouter router = GoRouter(
     GoRoute(path: '/genderview', builder: (context, state) => GenderView()),
     GoRoute(path: '/weightview', builder: (context, state) => WeightView()),
     GoRoute(path: '/heightview', builder: (context, state) => HeightView()),
+    GoRoute(path: '/goalview', builder: (context, state) => FitnessGoalView()),
+
     GoRoute(path: '/ageview', builder: (context, state) => AgeView()),
     GoRoute(path: '/homeview', builder: (context, state) => HomeView()),
     GoRoute(path: '/settingsview', builder: (context, state) => SettingsView()),

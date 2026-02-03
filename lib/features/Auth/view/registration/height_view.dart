@@ -61,23 +61,24 @@ class _HeightViewState extends State<HeightView> {
                   builder: (context, state) {
                     return MyButton(
                       onPressed: () {
-                        if (heightController.text.isNotEmpty) {
-                          context.read<RegistrationCubit>().saveheight(
-                            heightController.text,
-                          );
-                          GoRouter.of(context).push('/ageview');
-                        } else {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Center(
-                                child: Text(
-                                  'Please filled your Height in textfeild!',
-                                ),
-                              ),
-                              backgroundColor: Colors.redAccent,
-                            ),
-                          );
-                        }
+                        // if (heightController.text.isNotEmpty) {
+                        //   context.read<RegistrationCubit>().saveheight(
+                        //     heightController.text,
+                        //   );
+                        //   GoRouter.of(context).push('/ageview');
+                        // } else {
+                        //   ScaffoldMessenger.of(context).showSnackBar(
+                        //     SnackBar(
+                        //       content: Center(
+                        //         child: Text(
+                        //           'Please filled your Height in textfeild!',
+                        //         ),
+                        //       ),
+                        //       backgroundColor: Colors.redAccent,
+                        //     ),
+                        //   );
+                        // }
+                        GoRouter.of(context).push('/loginview');
                       },
                       text: "Next",
                       buttonColor: appColors.onPrimary,

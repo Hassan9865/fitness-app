@@ -122,24 +122,25 @@ class FitnessGoalView extends StatelessWidget {
                 builder: (context, state) {
                   return MyButton(
                     onPressed: () {
-                      if (state is GoalSelcte) {
-                        final selectedIndex = state.selectedGoal;
-                        final selectedGoaltxt =
-                            option[selectedIndex]['text'] as String;
-                        context.read<RegistrationCubit>().savegoal(
-                          selectedIndex,
-                          selectedGoaltxt,
-                        );
-                        GoRouter.of(context).push('/genderview');
-                      } else {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content: Center(
-                              child: Text("Please Select Fitness Goal"),
-                            ),
-                          ),
-                        );
-                      }
+                      // if (state is GoalSelcte) {
+                      //   final selectedIndex = state.selectedGoal;
+                      //   final selectedGoaltxt =
+                      //       option[selectedIndex]['text'] as String;
+                      //   context.read<RegistrationCubit>().savegoal(
+                      //     selectedIndex,
+                      //     selectedGoaltxt,
+                      //   );
+
+                      // } else {
+                      //   ScaffoldMessenger.of(context).showSnackBar(
+                      //     SnackBar(
+                      //       content: Center(
+                      //         child: Text("Please Select Fitness Goal"),
+                      //       ),
+                      //     ),
+                      //   );
+                      // }
+                      GoRouter.of(context).push('/weightview');
                     },
                     text: "Next",
                     buttonColor: appColors.onPrimary,

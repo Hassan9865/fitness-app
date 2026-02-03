@@ -171,7 +171,7 @@ class _SignupViewState extends State<SignupView> {
               children: [
                 GestureDetector(
                   onTap: () {
-                    context.go('/loginView');
+                    context.go('/loginview');
                   },
                   child: RichText(
                     text: TextSpan(

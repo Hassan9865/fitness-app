@@ -120,24 +120,25 @@ class GenderView extends StatelessWidget {
                 builder: (context, state) {
                   return MyButton(
                     onPressed: () {
-                      if (state is SelectGender) {
-                        final selectedIndex = state.selectgender;
-                        final selectGender =
-                            option[selectedIndex]['gender'] as String;
-                        context.read<RegistrationCubit>().savegender(
-                          selectedIndex,
-                          selectGender,
-                        );
-                        GoRouter.of(context).push('/weightview');
-                      } else {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content: Center(
-                              child: Text('Please select Gender'),
-                            ),
-                          ),
-                        );
-                      }
+                      // if (state is SelectGender) {
+                      //   final selectedIndex = state.selectgender;
+                      //   final selectGender =
+                      //       option[selectedIndex]['gender'] as String;
+                      //   context.read<RegistrationCubit>().savegender(
+                      //     selectedIndex,
+                      //     selectGender,
+                      //   );
+
+                      // } else {
+                      //   ScaffoldMessenger.of(context).showSnackBar(
+                      //     SnackBar(
+                      //       content: Center(
+                      //         child: Text('Please select Gender'),
+                      //       ),
+                      //     ),
+                      //   );
+                      // }
+                      GoRouter.of(context).push('/goalview');
                     },
                     text: "Next",
                     buttonColor: appColors.onPrimary,
