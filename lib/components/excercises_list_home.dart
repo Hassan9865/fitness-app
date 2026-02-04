@@ -17,9 +17,9 @@ class ExcercisesListHome extends StatefulWidget {
 
 class _ExcercisesListHomeState extends State<ExcercisesListHome> {
   final excersices = [
-    {"name": "Squats", "reps": "15", "image": "assets/splash.jpg"},
-    {"name": "Push Ups", "reps": "20", "image": "assets/splash.jpg"},
-    {"name": "Lunges", "reps": "30", "image": "assets/splash.jpg"},
+    {"name": "Squats", "reps": "15", "image": "assets/squat.jpg"},
+    {"name": "Push Ups", "reps": "20", "image": "assets/pushup.jpg"},
+    {"name": "Lunges", "reps": "30", "image": "assets/leg.jpg"},
   ];
   @override
   Widget build(BuildContext context) {

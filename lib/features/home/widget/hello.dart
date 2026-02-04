@@ -37,7 +37,7 @@ class Hello extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Hello [UserName]",
+                      "Hello Hassan",
                       style: TextStyle(
                         fontSize: MediaQuery.of(context).size.width / 25,
                         color: appColors.onSecondary,
