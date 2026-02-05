@@ -34,7 +34,7 @@ class FoodItemCard extends StatelessWidget {
           child: Stack(
             fit: StackFit.expand,
             children: [
-              Image.asset('assets/paratha.jpg', fit: BoxFit.cover),
+              // Image.asset('assets/paratha.jpg', fit: BoxFit.cover),
               BackdropFilter(
                 filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
                 child: Container(color: appColors.background.withAlpha(10)),
