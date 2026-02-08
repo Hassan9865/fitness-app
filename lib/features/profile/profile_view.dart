@@ -26,7 +26,7 @@ class ProfileView extends StatelessWidget {
         ),
         leading: IconButton(
           onPressed: () {
-            context.go('/homeview');
+            context.go('/bottomnavbar');
           },
           icon: Icon(Icons.arrow_back, color: appColors.onSecondary),
         ),
@@ -75,11 +75,14 @@ class ProfileView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CircleAvatar(radius: MediaQuery.of(context).size.width / 10),
+            CircleAvatar(
+              backgroundImage: AssetImage('assets/pic1.jpg'),
+              radius: MediaQuery.of(context).size.width / 10,
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                "Kelvin",
+                "Hassan",
                 style: TextStyle(
                   fontSize: MediaQuery.of(context).size.width / 20,
                   color: appColors.onSecondary,
@@ -129,7 +132,7 @@ class ProfileView extends StatelessWidget {
                     ),
                     child: MyTextfeild(
                       label: 'Full Name',
-                      text: "kelvin",
+                      text: "Syed Hassan Raza",
                       color: appColors.primary,
                       hintTxtColor: appColors.onSecondary,
                       icon: Icon(
@@ -147,7 +150,7 @@ class ProfileView extends StatelessWidget {
                     ),
                     child: MyTextfeild(
                       label: 'Email',
-                      text: "kelvin@gmail.com",
+                      text: "hassan@gmail.com",
                       color: appColors.primary,
                       hintTxtColor: appColors.onSecondary,
                       icon: Icon(
