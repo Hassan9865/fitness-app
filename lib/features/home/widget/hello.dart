@@ -29,7 +29,7 @@ class Hello extends StatelessWidget {
                 SizedBox(width: MediaQuery.of(context).size.width / 16),
                 CircleAvatar(
                   radius: MediaQuery.of(context).size.width / 15,
-                  backgroundImage: AssetImage("assets/splash.jpg"),
+                  backgroundImage: AssetImage("assets/pic1.jpg"),
                 ),
                 SizedBox(width: MediaQuery.of(context).size.width / 25),
                 Column(
