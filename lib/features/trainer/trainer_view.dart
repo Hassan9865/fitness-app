@@ -19,7 +19,7 @@ class _TrainersScreenState extends State<TrainersScreen> {
       specialization: "Weightlifting",
       experience: "5",
       rating: 4.8,
-      imageUrl: "assets/splash.jpg",
+      imageUrl: "assets/pic2.jpg",
     ),
     Trainer(
       id: "2",
@@ -27,7 +27,7 @@ class _TrainersScreenState extends State<TrainersScreen> {
       specialization: "Yoga",
       experience: "3",
       rating: 4.6,
-      imageUrl: "assets/splash.jpg",
+      imageUrl: "assets/pic3.jpg",
     ),
     Trainer(
       id: "3",
@@ -35,7 +35,7 @@ class _TrainersScreenState extends State<TrainersScreen> {
       specialization: "CrossFit",
       experience: "7",
       rating: 4.9,
-      imageUrl: "assets/splash.jpg",
+      imageUrl: "assets/pic1.jpg",
     ),
   ];
 

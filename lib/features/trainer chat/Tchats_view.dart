@@ -132,6 +132,8 @@ class TchatsView extends StatelessWidget {
                 prefixIcon: const Icon(Icons.search),
                 prefixIconColor: appColors.onSecondary,
                 border: OutlineInputBorder(
+                  
+                  borderSide: BorderSide(color: Colors.greenAccent),
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
@@ -139,14 +141,17 @@ class TchatsView extends StatelessWidget {
           ),
           Expanded(
             child: ListView.builder(
+              itemCount: 1,
               itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ListTile(
                     tileColor: appColors.primary,
-                    leading: CircleAvatar(),
+                    leading: CircleAvatar(
+                      backgroundImage: AssetImage("assets/pic3.jpg"),
+                    ),
                     title: Text(
-                      "hello",
+                      "doe_jane",
                       style: TextStyle(color: appColors.onSecondary),
                     ),
                     subtitle: Text(
