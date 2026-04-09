@@ -24,7 +24,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final authRepo = Provider.of<AuthRepository>(context);
     final appColors = Provider.of<AppColors>(context);
 
     return MaterialApp.router(

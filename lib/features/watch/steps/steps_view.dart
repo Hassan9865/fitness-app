@@ -5,7 +5,6 @@ import 'package:fitness_tracker/components/steps_card.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'Package:provider/provider.dart';
-import 'package:go_router/go_router.dart';
 
 class StepsView extends StatefulWidget {
   const StepsView({super.key});
@@ -109,7 +108,7 @@ class _StepsViewState extends State<StepsView> {
                     ),
                     InkWell(
                       onTap: () {
-                        GoRouter.of(context).push("/walkingView");
+                        // GoRouter.of(context).push("/walkingView");
                       },
                       child: StepsCard(
                         title: "Walking",
@@ -127,7 +126,7 @@ class _StepsViewState extends State<StepsView> {
                     ),
                     InkWell(
                       onTap: () {
-                        GoRouter.of(context).push("/runningView");
+                        // GoRouter.of(context).push("/runningView");
                       },
                       child: StepsCard(
                         title: "Running",
@@ -145,7 +144,7 @@ class _StepsViewState extends State<StepsView> {
                     ),
                     InkWell(
                       onTap: () {
-                        GoRouter.of(context).push("/bikingView");
+                        // GoRouter.of(context).push("/bikingView");
                       },
                       child: StepsCard(
                         title: "Biking",
