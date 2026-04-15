@@ -69,14 +69,6 @@ class _NutritionDaysState extends State<NutritionDays> {
                     offset: Offset(0, 4), // X and Y offset
                   ),
                 ],
-                // border: Border(
-                //   bottom: BorderSide(
-                //     width: 3,
-                //     color: _selectedDay == index
-                //         ? appColors.onPrimary
-                //         : appColors.background,
-                //   ),
-                // ),
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
