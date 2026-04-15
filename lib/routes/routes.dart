@@ -13,10 +13,6 @@ import 'package:fitness_tracker/features/home/home_view.dart';
 import 'package:fitness_tracker/features/notification/notifi_view.dart';
 import 'package:fitness_tracker/features/nutrition/nutrition_view.dart';
 import 'package:fitness_tracker/features/profile/profile_view.dart';
-import 'package:fitness_tracker/features/settings/change_password/change_password_view.dart';
-import 'package:fitness_tracker/features/settings/change_password/new_password/new_password.view.dart';
-import 'package:fitness_tracker/features/settings/change_password/verify_code/change_password_verify_view.dart';
-import 'package:fitness_tracker/features/settings/settings_view.dart';
 import 'package:fitness_tracker/features/splash/splash_view.dart';
 import 'package:fitness_tracker/features/trainer%20chat/Tchats_view.dart';
 import 'package:fitness_tracker/features/trainer%20chat/Tchatting_view.dart';
@@ -49,19 +45,19 @@ final GoRouter router = GoRouter(
 
     GoRoute(path: '/ageview', builder: (context, state) => AgeView()),
     GoRoute(path: '/homeview', builder: (context, state) => HomeView()),
-    GoRoute(path: '/settingsview', builder: (context, state) => SettingsView()),
-    GoRoute(
-      path: '/changepasswordview',
-      builder: (context, state) => ChangePasswordView(),
-    ),
-    GoRoute(
-      path: '/verifyPasswordChangeView',
-      builder: (context, state) => ChangePasswordVerifyview(),
-    ),
-    GoRoute(
-      path: '/newPasswordView',
-      builder: (context, state) => NewPasswordView(),
-    ),
+    // GoRoute(path: '/settingsview', builder: (context, state) => SettingsView()),
+    // GoRoute(
+    //   path: '/changepasswordview',
+    //   builder: (context, state) => ChangePasswordView(),
+    // ),
+    // GoRoute(
+    //   path: '/verifyPasswordChangeView',
+    //   builder: (context, state) => ChangePasswordVerifyview(),
+    // ),
+    // GoRoute(
+    //   path: '/newPasswordView',
+    //   builder: (context, state) => NewPasswordView(),
+    // ),
     GoRoute(path: '/notifiview', builder: (context, state) => NotifiView()),
     GoRoute(path: '/profileview', builder: (context, state) => ProfileView()),
     GoRoute(path: '/workoutview', builder: (context, state) => WorkoutView()),
@@ -77,10 +73,10 @@ final GoRouter router = GoRouter(
       builder: (context, state) => TchattingView(),
     ),
     GoRoute(path: '/watchView', builder: (context, state) => WatchView()),
-    GoRoute(
-      path: '/trainersview',
-      builder: (context, state) => TrainersScreen(),
-    ),
+    // GoRoute(
+    //   path: '/trainersview',
+    //   builder: (context, state) => TrainersScreen(),
+    // ),
     // GoRoute(path: '/walkingView', builder: (context, state) => Walkingview()),
     GoRoute(path: '/runningView', builder: (context, state) => RunningView()),
     GoRoute(path: '/bikingView', builder: (context, state) => BikingView()),

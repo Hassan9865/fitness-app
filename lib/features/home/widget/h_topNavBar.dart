@@ -1,5 +1,6 @@
 import 'package:fitness_tracker/components/app_colors.dart';
 import 'package:fitness_tracker/features/home/widget/h_iconTab.dart';
+import 'package:fitness_tracker/features/trainer/trainer_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ionicons/ionicons.dart';
@@ -61,7 +62,11 @@ class _HomeTopNavBarState extends State<HomeTopNavBar> {
           icon: Icon(Icons.person_outline),
           text: "Tainers",
           onPressed: () {
-            GoRouter.of(context).push('/trainersview');
+            // GoRouter.of(context).push('/trainersview');
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ProgressScreen()),
+            );
           },
         ),
       ],

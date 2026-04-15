@@ -81,8 +81,10 @@ class Hello extends StatelessWidget {
                         ),
                         SizedBox(width: 4),
                         // Container(
-                        //   padding:
-                        //       EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                        //   padding: EdgeInsets.symmetric(
+                        //     horizontal: 6,
+                        //     vertical: 2,
+                        //   ),
                         //   decoration: BoxDecoration(
                         //     color: Colors.deepOrange,
                         //     borderRadius: BorderRadius.circular(10),
@@ -103,47 +105,33 @@ class Hello extends StatelessWidget {
               ],
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(right: 10),
-            child: IconButton(
-              onPressed: () {
-                GoRouter.of(context).push('/notifiview');
-              },
-              icon: Icon(
-                Icons.notifications_outlined,
-                color: appColors.onSecondary,
-                size: MediaQuery.of(context).size.width / 15,
-              ),
-            ),
-          ),
-          // IconButton(
-          //   onPressed: () {
-          //     final appColors = context.read<AppColors>();
-          //     appColors.changeTheme(
-          //       theme: appColors.theme == "light" ? "dark" : "light",
-          //     );
-          //   },
-          //   icon: Icon(
-          //     appColors.theme == 'light'
-          //         ? Icons.light_mode_rounded
-          //         : Icons.dark_mode_outlined,
-          //     color: appColors.onSecondary,
-          //     size: MediaQuery.of(context).size.width / 15,
+          // Padding(
+          //   padding: EdgeInsets.only(right: 10),
+          //   child: IconButton(
+          //     onPressed: () {
+          //       GoRouter.of(context).push('/notifiview');
+          //     },
+          //     icon: Icon(
+          //       Icons.notifications_outlined,
+          //       color: appColors.onSecondary,
+          //       size: MediaQuery.of(context).size.width / 15,
+          //     ),
           //   ),
           // ),
-          Padding(
-            padding: const EdgeInsets.only(right: 15.0),
-            child: IconButton(
-              onPressed: () {
-                GoRouter.of(context).push('/settingsview');
-              },
-              icon: Icon(
-                Icons.settings_outlined,
-                color: appColors.onSecondary,
-                size: MediaQuery.of(context).size.width / 15,
-              ),
-            ),
-          ),
+
+          // Padding(
+          //   padding: const EdgeInsets.only(right: 15.0),
+          //   child: IconButton(
+          //     onPressed: () {
+          //       GoRouter.of(context).push('/settingsview');
+          //     },
+          //     icon: Icon(
+          //       Icons.settings_outlined,
+          //       color: appColors.onSecondary,
+          //       size: MediaQuery.of(context).size.width / 15,
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );

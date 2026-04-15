@@ -40,53 +40,6 @@ class _NutritionDaysState extends State<NutritionDays> {
         scrollDirection: Axis.horizontal,
         itemCount: _days.length,
         itemBuilder: (context, index) {
-          // return GestureDetector(
-          //   onTap: () {
-          //     setState(() {
-          //       _selectedDay = index;
-          //     });
-          //   },
-          //   child: Container(
-          //     width: 80,
-          //     alignment: Alignment.center,
-          //     decoration: BoxDecoration(
-          //       border: Border(
-          //         bottom: BorderSide(
-          //           width: 3,
-          //           color: _selectedDay == index
-          //               ? Colors.blue
-          //               : Colors.transparent,
-          //         ),
-          //       ),
-          //     ),
-          //     child: Column(
-          //       mainAxisAlignment: MainAxisAlignment.center,
-          //       children: [
-          //         Text(
-          //           _days[index],
-          //           style: TextStyle(
-          //               fontSize: 16,
-          //               fontWeight: _selectedDay == index
-          //                   ? FontWeight.bold
-          //                   : FontWeight.normal,
-          //               color: _selectedDay == index
-          //                   ? Colors.blue
-          //                   : appColors.onSecondary),
-          //         ),
-          //         SizedBox(height: 4),
-          //         Text(
-          //           '${_getDayNumber(index)}',
-          //           style: TextStyle(
-          //             fontSize: 14,
-          //             color: _selectedDay == index
-          //                 ? Colors.blue
-          //                 : appColors.secondary,
-          //           ),
-          //         ),
-          //       ],
-          //     ),
-          //   ),
-          // );
           return GestureDetector(
             onTap: () {
               setState(() {
@@ -119,7 +72,9 @@ class _NutritionDaysState extends State<NutritionDays> {
                 // border: Border(
                 //   bottom: BorderSide(
                 //     width: 3,
-                //     color: _selectedDay == index ? appColors.onPrimary : appColors.background,
+                //     color: _selectedDay == index
+                //         ? appColors.onPrimary
+                //         : appColors.background,
                 //   ),
                 // ),
               ),

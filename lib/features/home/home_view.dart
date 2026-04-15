@@ -126,6 +126,9 @@ class _HomeViewState extends State<HomeView> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
+                                //  📅 Today's Workout             │
+                                // │  ☐ Warm Up    ━━━━━━━━━  ✅    │
+                                // │  ☐ Cardio     ━━━━━━━━━  ▶️
                                 Text(
                                   "Weekly ",
                                   style: TextStyle(
@@ -200,6 +203,8 @@ class _HomeViewState extends State<HomeView> {
                   ),
                   child: CustomBarChart(appColors: appColors),
                 ),
+                //  🏆 Achievements                │
+                // │  🏅 7-Day Streak  🏅 1000 Cal
                 SizedBox(height: MediaQuery.of(context).size.height / 50),
                 // Padding(
                 //   padding: const EdgeInsets.all(8.0),
