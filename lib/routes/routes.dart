@@ -9,13 +9,14 @@ import 'package:fitness_tracker/features/Auth/view/registration/weight_view.dart
 import 'package:fitness_tracker/features/Auth/view/signup/signup_view.dart';
 import 'package:fitness_tracker/features/ai%20coach/aicoach_view.dart';
 import 'package:fitness_tracker/features/bottom_NavBar/bottom_NavBar_view.dart';
-import 'package:fitness_tracker/features/home/home_view.dart';
+import 'package:fitness_tracker/features/home/view/home_view.dart';
 import 'package:fitness_tracker/features/notification/notifi_view.dart';
 import 'package:fitness_tracker/features/nutrition/nutrition_view.dart';
 import 'package:fitness_tracker/features/profile/profile_view.dart';
 import 'package:fitness_tracker/features/splash/splash_view.dart';
 import 'package:fitness_tracker/features/trainer%20chat/Tchats_view.dart';
 import 'package:fitness_tracker/features/trainer%20chat/Tchatting_view.dart';
+import 'package:fitness_tracker/features/trainer/trainer_view.dart';
 import 'package:fitness_tracker/features/watch/steps/biking/biking_view.dart';
 import 'package:fitness_tracker/features/watch/steps/running/running_view.dart';
 import 'package:fitness_tracker/features/watch/watch_view.dart';
@@ -79,5 +80,9 @@ final GoRouter router = GoRouter(
     // GoRoute(path: '/walkingView', builder: (context, state) => Walkingview()),
     GoRoute(path: '/runningView', builder: (context, state) => RunningView()),
     GoRoute(path: '/bikingView', builder: (context, state) => BikingView()),
+    GoRoute(
+      path: '/progressview',
+      builder: (context, state) => ProgressScreen(),
+    ),
   ],
 );

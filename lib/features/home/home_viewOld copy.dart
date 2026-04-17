@@ -1,4 +1,6 @@
 import 'package:fitness_tracker/components/app_colors.dart';
+import 'package:fitness_tracker/features/home/widget/quick_action.dart';
+import 'package:fitness_tracker/features/home/widget/hello_user.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:go_router/go_router.dart';
@@ -18,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen>
   late Animation<double> _fadeAnimation;
 
   // User data
-  String _userName = "Ahmed";
+  // String _userName = "Ahmed";
   int _userLevel = 3;
   int _userXP = 450;
   int _nextLevelXP = 1000;
@@ -74,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen>
   void _loadUserData() async {
     // In real app, load from SharedPreferences
     setState(() {
-      _userName = "Ahmed";
+      // _userName = "Ahmed";
       _userLevel = 3;
       _userXP = 450;
     });
@@ -169,14 +171,14 @@ class _HomeScreenState extends State<HomeScreen>
           child: CustomScrollView(
             physics: const BouncingScrollPhysics(),
             slivers: [
-              // App Bar with Greeting
-              SliverToBoxAdapter(child: _buildAppBar(appColors, screenWidth)),
+              SliverToBoxAdapter(child: HelloUser()),
 
               // XP Progress Bar
               SliverToBoxAdapter(child: _buildXPProgress(appColors)),
 
               // Motivational Quote
               SliverToBoxAdapter(child: _buildQuoteCard(appColors)),
+              SliverToBoxAdapter(child: QuickAction()),
 
               // Stats Row
               SliverToBoxAdapter(child: _buildStatsRow(appColors, screenWidth)),
@@ -208,54 +210,6 @@ class _HomeScreenState extends State<HomeScreen>
         onPressed: _showQuickLogDialog,
         backgroundColor: Colors.deepOrange,
         child: const Icon(Icons.add, color: Colors.white, size: 30),
-      ),
-    );
-  }
-
-  Widget _buildAppBar(AppColors appColors, double screenWidth) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Hello, 👋",
-                style: TextStyle(
-                  color: appColors.onSecondary.withOpacity(0.7),
-                  fontSize: 14,
-                ),
-              ),
-              const SizedBox(height: 4),
-              Text(
-                _userName,
-                style: TextStyle(
-                  color: appColors.onSecondary,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Colors.deepOrange.shade400,
-                  Colors.deepOrange.shade700,
-                ],
-              ),
-              shape: BoxShape.circle,
-            ),
-            child: CircleAvatar(
-              radius: 25,
-              backgroundColor: Colors.transparent,
-              child: const Icon(Icons.person, color: Colors.white, size: 28),
-            ),
-          ),
-        ],
       ),
     );
   }
@@ -922,7 +876,7 @@ class _HomeScreenState extends State<HomeScreen>
                 "Start Workout",
                 Icons.fitness_center,
                 Colors.deepOrange,
-                '/workout',
+                '/workoutview',
               ),
               const SizedBox(width: 12),
               _buildActionButton(
@@ -930,7 +884,7 @@ class _HomeScreenState extends State<HomeScreen>
                 "Log Meal",
                 Icons.restaurant,
                 Colors.green,
-                '/nutrition',
+                '/nutritionview',
               ),
               const SizedBox(width: 12),
               _buildActionButton(
@@ -938,7 +892,7 @@ class _HomeScreenState extends State<HomeScreen>
                 "View Progress",
                 Icons.trending_up,
                 Colors.blue,
-                '/progress',
+                '/progressview',
               ),
             ],
           ),
@@ -956,7 +910,7 @@ class _HomeScreenState extends State<HomeScreen>
   ) {
     return Expanded(
       child: GestureDetector(
-        onTap: () => context.go(route),
+        onTap: () => GoRouter.of(context).push(route),
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 12),
           decoration: BoxDecoration(

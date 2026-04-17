@@ -137,3 +137,62 @@ class Hello extends StatelessWidget {
     );
   }
 }
+
+class HelloUser extends StatelessWidget {
+  const HelloUser({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final appColors = Provider.of<AppColors>(context);
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
+      child: GestureDetector(
+        onTap: () {
+          GoRouter.of(context).push('/profileview');
+        },
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Hello, 👋",
+                  style: TextStyle(
+                    color: appColors.onSecondary.withOpacity(0.7),
+                    fontSize: 14,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  'Hassan',
+                  style: TextStyle(
+                    color: appColors.onSecondary,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Colors.deepOrange.shade400,
+                    Colors.deepOrange.shade700,
+                  ],
+                ),
+                shape: BoxShape.circle,
+              ),
+              child: CircleAvatar(
+                radius: 25,
+                backgroundColor: Colors.transparent,
+                child: const Icon(Icons.person, color: Colors.white, size: 28),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
