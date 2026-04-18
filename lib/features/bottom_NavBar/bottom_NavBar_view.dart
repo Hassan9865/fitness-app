@@ -1,9 +1,8 @@
 import 'package:fitness_tracker/components/app_colors.dart';
 import 'package:fitness_tracker/components/default_text_style.dart';
 import 'package:fitness_tracker/features/bottom_NavBar/cubit/nav_bar_cubit.dart';
-import 'package:fitness_tracker/features/home/home_viewOld%20copy.dart';
 import 'package:fitness_tracker/features/home/view/home_view.dart';
-import 'package:fitness_tracker/features/progress/Tchats_view.dart';
+import 'package:fitness_tracker/features/progress/view/progress_view.dart';
 import 'package:fitness_tracker/features/watch/watch_view.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +13,8 @@ import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 class BottomNavbarView extends StatelessWidget {
   final PersistentTabController _controller = PersistentTabController();
+
+  BottomNavbarView({super.key});
   @override
   Widget build(BuildContext context) {
     final appColors = Provider.of<AppColors>(context);
@@ -50,7 +51,7 @@ class BottomNavbarView extends StatelessWidget {
   }
 }
 
-List<Widget> _buildScreens() => [HomeView(), TchatsView(), WatchView()];
+List<Widget> _buildScreens() => [HomeView(), ProgressScreen(), WatchView()];
 
 List<PersistentBottomNavBarItem> _navBarsItems({required AppColors appColors}) {
   return [
