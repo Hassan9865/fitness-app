@@ -15,12 +15,11 @@ import 'package:fitness_tracker/features/nutrition/nutrition_view.dart';
 import 'package:fitness_tracker/features/profile/profile_view.dart';
 import 'package:fitness_tracker/features/splash/splash_view.dart';
 import 'package:fitness_tracker/features/trainer%20chat/Tchats_view.dart';
-import 'package:fitness_tracker/features/trainer%20chat/Tchatting_view.dart';
 import 'package:fitness_tracker/features/trainer/trainer_view.dart';
 import 'package:fitness_tracker/features/watch/steps/biking/biking_view.dart';
 import 'package:fitness_tracker/features/watch/steps/running/running_view.dart';
 import 'package:fitness_tracker/features/watch/watch_view.dart';
-import 'package:fitness_tracker/features/workout/workout_view.dart';
+import 'package:fitness_tracker/features/workout/view/workout_view.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter router = GoRouter(
@@ -68,10 +67,7 @@ final GoRouter router = GoRouter(
       path: '/nutritionview',
       builder: (context, state) => NutritionScreen(),
     ),
-    GoRoute(
-      path: '/tchattingview',
-      builder: (context, state) => TchattingView(),
-    ),
+
     GoRoute(path: '/watchView', builder: (context, state) => WatchView()),
     // GoRoute(
     //   path: '/trainersview',

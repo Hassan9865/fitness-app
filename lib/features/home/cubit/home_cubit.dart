@@ -65,6 +65,11 @@ class HomeCubit extends Cubit<HomeState> {
     final quotes = [
       "💪 Don't stop when you're tired",
       "🔥 The only bad workout is none",
+      "💪 Don't stop when you're tired. Stop when you're done!",
+      "🔥 The only bad workout is the one that didn't happen.",
+      "🌟 Your only limit is your mind.",
+      "🏆 Success starts with self-discipline.",
+      "⚡ Make your future self proud!",
     ];
     return quotes[Random().nextInt(quotes.length)];
   }

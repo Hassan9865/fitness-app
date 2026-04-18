@@ -5,6 +5,7 @@ import 'package:fitness_tracker/features/home/widget/achivements.dart';
 import 'package:fitness_tracker/features/home/widget/quick_action.dart';
 import 'package:fitness_tracker/features/home/widget/hello_user.dart';
 import 'package:fitness_tracker/features/home/widget/quote_card.dart';
+import 'package:fitness_tracker/features/home/widget/quick_log.dart';
 import 'package:fitness_tracker/features/home/widget/stats_row.dart';
 import 'package:fitness_tracker/features/home/widget/water_intake.dart';
 import 'package:fitness_tracker/features/home/widget/xp_progress.dart';
@@ -59,6 +60,11 @@ class HomeView extends StatelessWidget {
             );
           },
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => QuickLogBottomSheet.show(context),
+        backgroundColor: Colors.deepOrange,
+        child: const Icon(Icons.add, color: Colors.white, size: 30),
       ),
     );
   }
