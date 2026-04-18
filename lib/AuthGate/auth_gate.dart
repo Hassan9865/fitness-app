@@ -8,28 +8,26 @@ class AuthGate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<String?>(
-        future: SharedPreferences.getInstance()
-            .then((prefs) => prefs.getString('token')),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return Scaffold(
-              body: Center(
-                child: CircularProgressIndicator(),
-              ),
-            );
+      future: SharedPreferences.getInstance().then(
+        (prefs) => prefs.getString('token'),
+      ),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return Scaffold(body: Center(child: CircularProgressIndicator()));
+        }
+        final token = snapshot.data;
+        print('Retrieved token: $token');
+        Future.delayed(Duration.zero, () {
+          if (token != null) {
+            GoRouter.of(context).replace('/homeview');
+            print('Navigating to homeview');
+          } else {
+            GoRouter.of(context).replace('/loginview');
+            print('Navigating to loginview');
           }
-          final token = snapshot.data;
-          print('Retrieved token: $token');
-          Future.delayed(Duration.zero, () {
-            if (token != null) {
-              GoRouter.of(context).replace('/bottomnavbar');
-              print('Navigating to homeview');
-            } else {
-              GoRouter.of(context).replace('/loginview');
-              print('Navigating to loginview');
-            }
-          });
-          return SizedBox();
         });
+        return SizedBox();
+      },
+    );
   }
 }
