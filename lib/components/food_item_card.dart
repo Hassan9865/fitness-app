@@ -1,8 +1,8 @@
 import 'dart:ui';
 
 import 'package:fitness_tracker/components/app_colors.dart';
-import 'package:fitness_tracker/features/nutrition/widgets/buildMealSection.dart';
-import 'package:fitness_tracker/features/nutrition/widgets/nutritionIndicator.dart';
+import 'package:fitness_tracker/features/nutrition/widgets/day_tabs.dart';
+import 'package:fitness_tracker/features/nutrition/widgets/water_tracker.dart';
 import 'package:flutter/material.dart';
 
 class FoodItemCard extends StatelessWidget {

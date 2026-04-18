@@ -3,7 +3,7 @@ import 'package:fitness_tracker/components/default_text_style.dart';
 import 'package:fitness_tracker/features/bottom_NavBar/cubit/nav_bar_cubit.dart';
 import 'package:fitness_tracker/features/home/home_viewOld%20copy.dart';
 import 'package:fitness_tracker/features/home/view/home_view.dart';
-import 'package:fitness_tracker/features/trainer%20chat/Tchats_view.dart';
+import 'package:fitness_tracker/features/progress/Tchats_view.dart';
 import 'package:fitness_tracker/features/watch/watch_view.dart';
 import 'package:flutter/material.dart';
 

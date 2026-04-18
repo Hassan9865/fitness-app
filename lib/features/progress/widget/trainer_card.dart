@@ -1,5 +1,5 @@
 import 'package:fitness_tracker/components/app_colors.dart';
-import 'package:fitness_tracker/features/trainer/model/trainer_model.dart';
+import 'package:fitness_tracker/features/nutrition/model/meal_item.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
