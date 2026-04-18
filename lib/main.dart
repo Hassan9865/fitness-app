@@ -1,5 +1,6 @@
 import 'package:fitness_tracker/components/app_colors.dart';
 import 'package:fitness_tracker/features/home/cubit/home_cubit.dart';
+import 'package:fitness_tracker/features/nutrition/cubit/nutrition_cubit.dart';
 import 'package:fitness_tracker/features/workout/cubit/workout_cubit%20.dart';
 
 import 'package:flutter/material.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => AppColors(theme: "light")),
         BlocProvider(create: (context) => HomeCubit()),
         BlocProvider(create: (context) => WorkoutCubit()),
+        BlocProvider(create: (context) => NutritionCubit()),
 
         // Provider<AuthRepository>(create: (_) => AuthRepository()),
       ],
